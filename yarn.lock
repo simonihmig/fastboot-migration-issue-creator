@@ -271,6 +271,10 @@ min-request@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/min-request/-/min-request-1.4.1.tgz#17634cfb433600d3db3800c697bb696eef8589d2"
 
+minimist@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"

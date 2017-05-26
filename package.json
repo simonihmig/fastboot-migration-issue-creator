@@ -13,6 +13,7 @@
     "bluebird": "^3.5.0",
     "get-repository-url": "^0.1.1",
     "github": "^9.2.0",
+    "minimist": "^1.2.0",
     "parse-github-repo-url": "^1.4.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"

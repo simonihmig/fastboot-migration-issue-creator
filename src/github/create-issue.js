@@ -10,6 +10,7 @@ module.exports = function createIssue(github, repoSpec, title, body) {
     body
   })
     .then(result => {
+      console.log(`Created issue in ${repo} repo: ${result.data.html_url}`);
       let count = result.data.total_count;
       return rateLimit(result)
         .then(() => count === 0);
