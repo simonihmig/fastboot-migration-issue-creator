@@ -4,6 +4,7 @@ const MergeProvider = require('./providers/merge');
 const EmberObserverSearchProvider = require('./providers/emberobserver-search');
 const hasNoIssue = require('./github/has-no-repo-issue');
 const createIssue = require('./github/create-issue');
+const getRepo = require('./github/get-repo');
 const Promise = require('bluebird');
 const GitHubApi = require("github");
 
@@ -28,11 +29,13 @@ let github = new GitHubApi({
   Promise
 });
 
-github.authenticate({
-  type: "basic",
-  username,
-  password
-});
+if (username && password) {
+  github.authenticate({
+    type: "basic",
+    username,
+    password
+  });
+}
 
 let provider = new MergeProvider([
   new EmberObserverSearchProvider('process.env.EMBER_CLI_FASTBOOT'),
