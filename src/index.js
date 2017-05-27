@@ -52,10 +52,9 @@ if (dummyAddon) {
   repos = Promise.resolve(['simonihmig/fastboot-migration-issue-creator-dummy-addon'])
 } else {
   repos = provider.retrieve()
-    .then(addons => addons.filter(addon => addon !== 'ember-x-editable-addon'))
     .then(addons => {
       console.log('Found these addons:', addons);
-      return Promise.filter(addons.map(addon => getRepo(addon)), repo => !!repo)
+      return Promise.filter(addons.map(addon => getRepo(addon).catch(() => {})), repo => !!repo)
     });
 }
 
